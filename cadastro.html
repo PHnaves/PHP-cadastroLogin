@@ -7,39 +7,39 @@
     <link rel="stylesheet" href="pasta-css/cadastro.css">
 </head>
 <body id="cadastro">
-    <form action="cadastro.php" method="post">
+    <form action="cadastro.php" method="POST">
         <h1>Cadastro</h1>
         <img src="pasta imagens/logo_versao_black.png" width="80px" alt="Logo"> <!-- Tamanho da logo reduzido -->
 
         <!-- Campo de email-->
         <div class="input-box-cadastro">
-            <input class="input-cadastro" id="email" type="email" placeholder="Digite seu email" required>
+            <input class="input-cadastro" name="email" type="email" placeholder="Digite seu email" required>
             <img src="pasta imagens/png/001-do-utilizador.png" alt="">
         </div>
 
         <!-- Agrupamento de campos: nome completo e telefone -->
         <div class="input-box-group-cadastro">
             <div class="input-box-cadastro">
-                <input class="input-cadastro" id="nome-completo" type="text" placeholder="Nome Completo" required>
+                <input class="input-cadastro" name="nomeCompleto" type="text" placeholder="Nome Completo" required>
                 <img src="pasta imagens/png/002-do-utilizador-1.png" alt="">
             </div>
     
             <div class="input-box-cadastro">
-                <input class="input-cadastro" id="telefone" type="tel" placeholder="Telefone" required>
+                <input class="input-cadastro" name="telefone" type="tel" placeholder="Telefone" required>
                 <img src="pasta imagens/png/018-telefone.png" alt="">
             </div>
         </div>
 
         <!-- Campo de criação de senha -->
         <div class="input-box-cadastro">
-            <input id="senha1" class="input-cadastro" type="password" placeholder="Senha (máximo 20 caracteres)" maxlength="20" minlength="8" required>
+            <input name="senha1" class="input-cadastro" type="password" placeholder="Senha (máximo 20 caracteres)" maxlength="20" minlength="8" required>
             <img src="pasta imagens/png/017-cadeado-trancado.png" alt="">
             <i id="toggleSenha1" class="bi bi-eye-slash eye-icon" onclick="toggleSenha('senha1', 'toggleSenha1')"></i>
         </div>
 
         <!-- Campo de confirmação de senha -->
         <div class="input-box-cadastro">
-            <input id="senha2" class="input-cadastro" type="password" placeholder="Confirmar senha" maxlength="20" minlength="8" required>
+            <input name="senha2" class="input-cadastro" type="password" placeholder="Confirmar senha" maxlength="20" minlength="8" required>
             <img src="pasta imagens/png/017-cadeado-trancado.png" alt="">
             <i id="toggleSenha2" class="bi bi-eye-slash eye-icon" onclick="toggleSenha('senha2', 'toggleSenha2')"></i>
         </div>
