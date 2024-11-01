@@ -25,9 +25,10 @@ $userData = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if ($email == $userData['email'] && $senha == $userData['senha']) {
     session_start();
-    $_SESSION['email'] = $email;
-    $_SESSION['senha'] = $senha;
-    header("Location: conteudo.html");
+    $_SESSION['user_name'] = $user['nomeCompleto'];
+    // Armazena o IP do usuário no cookie
+    setcookie("user_ip", $_SERVER['REMOTE_ADDR'], time() + (86400 * 30)); 
+    header("Location: conteudo.phtml");
 } else {
     echo "Login ou senha inválidos!";
 }
