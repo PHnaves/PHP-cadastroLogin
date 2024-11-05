@@ -38,12 +38,7 @@ form {
     }
 }
 
-@font-face {
-    font-family: 'Ghost HOuses';
-    src: url('fontes/Ghost HOuses.otf');
-}
 form h1 {
-    font-family: 'Ghost HOuses';
     font-size: 2rem;
     letter-spacing: 2px;
     color: #ffffff;

@@ -41,20 +41,20 @@ form {
     }   
 }
 
-@font-face {
-    font-family: 'Ghost HOuses';
-    src: url('fontes/Ghost HOuses.otf');
-}
-
 form h1 {
-    font-family: 'Ghost HOuses';
     font-size: 2rem;
     letter-spacing: 2px;
     color: #ffffff;
+    animation: fade-in 1.5s ease-out forwards;
 }
 
-form img {
-    margin-bottom: 15px; /* Espaçamento inferior reduzido */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 /* Estilos para a div que envolve cada input */
@@ -64,6 +64,18 @@ form img {
     margin-bottom: 1rem; /* Espaçamento inferior reduzido */
     display: flex;
     justify-content: space-between;
+    animation: fade-in-up 1.8s ease-out forwards;
+}
+
+@keyframes fade-in-up {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /* Estilos gerais para os inputs */
