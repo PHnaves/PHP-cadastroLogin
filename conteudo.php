@@ -1,11 +1,26 @@
-<?php
-session_start();
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteúdo</title>
+</head>
+<body>
+    <h1>
+        <?php
+        //include 'logout.php';
+        session_start();
+        
+        
+        if (!isset($_SESSION['user_name'])) {
+            include 'logout.php';
+            //header("Location: login.php");
+        }
 
-if (isset($_COOKIE['user_ip']) && $_COOKIE['user_ip'] !== $_SERVER['REMOTE_ADDR']) {
-    session_destroy();
-    header("Location: login.html");
-    exit;
-}
+        echo"Seja bem-vindo, " . $_SESSION['user_name'];
+        ?>
+    </h1>
 
-header("Location: conteudo.phtml");
-?>
+    <a href="login.html">Sair</a>
+</body>
+</html>

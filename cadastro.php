@@ -7,10 +7,12 @@ $email = $_POST['email'];
 $nomeCompleto = $_POST['nomeCompleto'];
 $telefone = $_POST['telefone'];
 $senha1 = $_POST['senha1'];
-$senha2 = $_POST['senha2'];
+$senhaConfirm = $_POST['senha-confirm'];
 
-if($senha2 =! $senha1) {
+if($senhaConfirm !== $senha1) {
     echo "As senhas não correspondem!";
+    // carregar pagina de cadastro
+    // header("Location: cadastro.html");
 }
 else{
     // criando a conexao com o banco de dados

@@ -92,7 +92,7 @@ form h1 {
     color: rgba(0, 0, 0, 0.7);
 }
 
-.input-box img {
+.input-box .bi {
     position: absolute;
     width: 17px;
     height: 17px;

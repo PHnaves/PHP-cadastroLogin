@@ -87,7 +87,7 @@ input::placeholder {
     padding-right: 40px;
 }
 
-.input-box-cadastro img {
+.input-box-cadastro .bi {
     position: absolute;
     width: 17px;
     height: 17px;
